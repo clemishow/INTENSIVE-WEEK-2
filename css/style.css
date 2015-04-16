@@ -18,6 +18,73 @@ header {
 	left: 480px;
 }
 
+p {
+	width: 250px;
+  	position: relative;
+  	left: 24px;
+  	color: white;
+  	text-transform: uppercase;
+  	line-height: 20px;
+  	opacity: 1;
+}
+
+h3 {
+	position: absolute;
+	left: -65px;
+	top: 3px;
+}
+
+.red {
+	color: #e74c3c;
+}
+
+#stabilite_texte {
+	position: absolute;
+	left: -75px;
+}
+
+#stabilite_valeur{
+	position: absolute;
+	left: 50px;
+}
+
+#purete_valeur {
+	position: absolute;
+	left: 55px;
+}
+
+#argent_valeur {
+	position: absolute;
+	left: 55px;
+}
+
+#stabilite, #purete, #argent {
+  width: 130px;
+  height: 20px;
+  background: white;
+  border: solid 3px #828387;
+  position: absolute;
+  border-radius: 40px;
+  font-size: 14px;
+  color: #828387;
+  position: absolute;
+}
+
+#stabilite {
+  top: 12px;
+  left: 90px;
+}
+
+#purete {
+  top: 12px;
+  left: 315px;
+}
+
+#argent {
+  top: 12px;
+  left: 550px;
+}
+
 /*MENU TRANSITION*/
 
 .navicon-container {
@@ -75,7 +142,7 @@ header {
 #title {
 	font-size: 30px;
 	font-style: bold;
-	background: black;
+	background: #34495e;
   	color: white;
   	height: 40px;
   	padding-top: 10px;
@@ -95,12 +162,20 @@ header {
 	z-index: 2;
 }
 
-#amelioration_1, #amelioration_2, #amelioration_3, #amelioration_4, #amelioration_5, #amelioration_6 {
-	width: 100%;
-	height: 150px;
-	background: gray;
-	border-bottom: solid 2px; 
-	padding-top: 10px;
+#amelioration_1, #amelioration_2, #amelioration_3, #amelioration_4, #amelioration_5 {
+	width: 300px;
+	height: 165px;
+	background: #95a5a6;
+	border-bottom: solid 2px #34495e; 
+	padding-top: 15px;
+}
+
+#amelioration_5 {
+	width: 300px;
+	height: 195px;
+	background: #95a5a6;
+	border-bottom: none; 
+	padding-top: 15px;
 }
 
 #amelioration_1 {
@@ -111,7 +186,31 @@ header {
 	border-bottom: none; 
 }
 
-#button_buy {
+
+#amelioration_1_texte {
+	top: 20px;
+}
+
+
+#amelioration_2_texte {
+	top: 10px;
+}
+
+#amelioration_3_texte {
+	top: -15px;
+}
+
+#amelioration_4_texte {
+	top: -30px;
+}
+
+#amelioration_5_texte, #amelioration_6_texte {
+	top: -50px;
+}
+
+
+
+#button_buy, #button_buy_liquide, #button_buy_chauffe, #button_buy_meth, #button_buy_dealer, #button_buy_stability, #button_buy_molecular {
 	text-transform: uppercase;
 	position: relative;
   	top: 16px;
@@ -121,6 +220,32 @@ header {
   	cursor: pointer;
   	z-index: 0;
 }
+
+#button_buy_chauffe {
+	top: 23px;
+}
+
+
+#button_buy_liquide {
+	top: 42px;
+}
+
+#button_buy_meth, #button_buy_dealer {
+	top: 0px;
+}
+
+#button_buy_dealer {
+	top: -17px;
+}
+
+#button_buy_stability {
+	top: -34px;
+}
+
+#button_buy_molecular {
+	top: -30px;
+}
+
 nav {
 	width: 300px;
 	height: 550px;
@@ -136,7 +261,6 @@ nav {
 	overflow: auto;
 	transition: 500ms all;
 }
-
 
 /*ALERTE*/
 
@@ -291,7 +415,7 @@ nav {
 	background: #f1c40f;
 	position: absolute;
 	left: -100px;
-	transition: 5s all;
+	transition: 11s all;
 
 }
 
@@ -898,7 +1022,7 @@ nav {
 #flacon_liquide {
 	width: 78px;
 	height: 78px;
-	background: #70CAC9;
+	background: #069CCE;
 	position: absolute;
 	top: 80px;
 	left: 0;
@@ -972,7 +1096,7 @@ nav {
 
 #structure_reliage_tube_1 {
 	width: 5px;
-	height: 185px;
+	height: 170px;
 	position: absolute;
     top: 150px;
     left: 400px;
@@ -984,9 +1108,9 @@ nav {
 #structure_reliage_tube_1_remplissage {
 	content: "";
 	width: 5px;
-	height: 185px;
+	height: 170px;
 	position: absolute;
-    top: 185px;
+    top: 170px;
     left: 0px;
 	background: #FA91C3;
 	transition: 3s;
@@ -1033,7 +1157,7 @@ nav {
 	position: absolute;
     top: -100px;
     left: 0px;
-	background: #70CAC9;
+	background: #069CCE;
 	transition: 3s 6s;
 }
 
@@ -1116,7 +1240,9 @@ nav {
 	position: absolute;
 	top: 60px;
 	left: 0px;
-	-webkit-animation: mouvement 3s infinite;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-name: mouvement;
+	-webkit-animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes mouvement {
@@ -1146,6 +1272,7 @@ nav {
 	color: white;
 	transition: 200s;
 	display: none;
+	cursor:url('../imgs/spoon.png'), auto;
 }
 
 #Outer:hover {
@@ -1166,3 +1293,44 @@ nav {
 	padding-top: 3px;
 }
 
+#methContainer {
+	position: absolute;
+	left: 385px;
+  	top: 260px;
+	width: 400px;
+	height: 100px;
+	background-color: #069CCE;
+	margin-left: 50px;
+	overflow: hidden;
+	cursor:url('../imgs/hammer2.png'), auto;
+	display: none;
+	z-index: 99999999999;
+
+}
+
+.eclat {
+	display: none;
+    position: absolute;
+}
+
+/*IMAGE MENU*/
+
+#crystal {
+	position: relative;
+	top: -10px;
+}
+
+#dealer {
+	position: relative;
+	top: -20px;
+}
+
+#stabilite_logo {
+	position:  relative;
+	top: -22px;
+}
+
+#molecular {
+	position:  relative;
+	top: -22px;
+}

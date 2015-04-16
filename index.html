@@ -10,52 +10,58 @@
 <body>
 <!-- BARRE -->
 	<header>
+		<div id="stabilite" >
+			<h3 id="stabilite_texte">Stabilité :</h3>
+			<h3 id="stabilite_valeur">20%</h3>
+		</div>
+		
+		<div id="purete">
+			<h3>Pureté :</h3>
+			<h3 id="purete_valeur"> 90%</h3>
+		</div>
+
+		
+		<div id="argent">
+			<h3>Argent :</h3>
+			<h3 id="argent_valeur"> 1000000</h3>
+		</div>
 		<div class="navicon-container">
   			<div class="navicon"></div>
-		</div>
-		<div id="stabilite">
-
-		</div>
-		<div id="purete">
-
-		</div>
-		<div id="argent">
-
 		</div>
 	</header>
 <!-- MENU + ELEMENTS -->
 	<nav>
 		<h2 id="title">MENU</h2>
 		<div id="amelioration_1">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
+			<img src="imgs/becher.png" width="40">
+				<p id="amelioration_1_texte">Rempli le becher<br />COÛT : <span class="red">500</span><span class="red">$</span></p>
+			<a id="button_buy_liquide">améliorer</a>
 		</div>
 		<div id="amelioration_2">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
+			<img src="imgs/chauffe.png" width="50">
+				<p id="amelioration_2_texte">Diminue de 2 secondes le temps de cuisson<br />COÛT : <span class="red" id="cout_chauffe">1000</span><span class="red">$</span></p>
+			<a id="button_buy_chauffe">améliorer</a>
 		</div>
 		<div id="amelioration_3">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
+			<img id="crystal" src="imgs/crystal.png" width="60">
+				<p id="amelioration_3_texte">Produit plus de méthamphétamine<br />COÛT : <span class="red" id="cout_meth">3000</span><span class="red">$</span></p>
+			<a id="button_buy_meth">améliorer</a>
 		</div>
 		<div id="amelioration_4">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
+			<img id="dealer" src="imgs/dealer.png" width="75">
+				<p id="amelioration_4_texte">Recrute des dealers pour vendre plus<br />COÛT : <span class="red" id="cout_dealer">8000</span><span class="red">$</span></p>
+			<a id="button_buy_dealer">améliorer</a>
 		</div>
 		<div id="amelioration_5">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
+			<img id="stabilite_logo" src="imgs/stability.png" width="90">
+				<p id="amelioration_5_texte">Augmente de 20 points la stabilité<br />COÛT : <span class="red" id="cout_stability">500</span><span class="red">$</span></p>
+			<a id="button_buy_stability">améliorer</a>
 		</div>
-		<div id="amelioration_6">
-			<img src="imgs/barrel.png" width="50">
-				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
-			<a id="button_buy">améliorer</a>
-		</div>
+		<!-- <div id="amelioration_6">
+			<img id="molecular" src="imgs/molecular.png" width="100">
+				<p id="amelioration_6_texte">Augmente de 20 points la stabilité<br/>COÛT : <span class="red" id="cout_molecular">15000</span><span class="red">$</span></p>
+			<a id="button_buy_molecular">améliorer</a>
+		</div> -->
 	</nav>
 <!-- ALERTE -->
 	<div id="alerte">
@@ -174,6 +180,18 @@
 	<div id="popup_cross"></div>
 	<div id="popup_win_texte"></div>
 </div>
+
+<!-- CASSAGE DE METH -->
+    <div id="methContainer">
+        <img class="eclat" src="imgs/1.png" alt="" style="width : 200px; height : auto;" id="img1">
+        <img class="eclat" src="imgs/2.png" alt="" style="width : 200px; height : auto;" id="img2">
+        <img class="eclat" src="imgs/3.png" alt="" style="width : 200px; height : auto;" id="img3">
+        <img class="eclat" src="imgs/4.png" alt="" style="width : 200px; height : auto;" id="img4">
+        <img class="eclat" src="imgs/5.png" alt="" style="width : 200px; height : auto;" id="img5">
+        <img class="eclat" src="imgs/6.png" alt="" style="width : 200px; height : auto;" id="img6">
+        <img class="eclat" src="imgs/7.png" alt="" style="width : 200px; height : auto;" id="img7">
+    </div>
+
 
 <div id="alerte_perdu"></div>
 
