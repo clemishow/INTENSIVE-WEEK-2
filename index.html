@@ -5,8 +5,180 @@
 	<title>Game</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
+<!-- BARRE -->
+	<header>
+		<div class="navicon-container">
+  			<div class="navicon"></div>
+		</div>
+		<div id="stabilite">
+
+		</div>
+		<div id="purete">
+
+		</div>
+		<div id="argent">
+
+		</div>
+	</header>
+<!-- MENU + ELEMENTS -->
+	<nav>
+		<h2 id="title">MENU</h2>
+		<div id="amelioration_1">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+		<div id="amelioration_2">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+		<div id="amelioration_3">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+		<div id="amelioration_4">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+		<div id="amelioration_5">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+		<div id="amelioration_6">
+			<img src="imgs/barrel.png" width="50">
+				<p>Lorem ipsmu, esr ce sas reza gzas paska lfnfa psas dazpd oqsd oijfza oiqwxnf fjqsn fjqejr qijqrq jfsqod</p>
+			<a id="button_buy">améliorer</a>
+		</div>
+	</nav>
+<!-- ALERTE -->
+	<div id="alerte">
+		<div id="alerte_texte"></div>
+		<div id="alerte_cross"></div>
+	</div>
+
+<!-- POPUP + GAME -->
+	<div id="popup_jauge">
+		<div id="jauge">
+			<div id="cercle"></div>
+		</div>
+	</div>
+<!-- PIED -->
+<img id="pied" src="imgs/pied.png">
+<div id="pied_morceau"></div>
+<!-- FIOLE -->
+		<div id="container_fiole">
+			<div id="fiole">
+				<div id="fiole_2">
+					<div id="liquide"></div>
+				</div>
+			</div>
+			<div id="tube">
+				<div id="tube_2">
+					<div id="liquide_tube"></div>
+				</div>	
+			</div>
+			<div id="rebord"></div>
+			<div id="mousse"></div>
+			<div id="mousse2"></div>
+			<div id="mousse3"></div>
+			<div id="mousse4"></div>
+			<div id="bulle_1"></div>
+			<div id="bulle_2"></div>
+			<div id="bulle_3"></div>
+			<div id="bulle_4"></div>
+		</div>
+<!-- CHAUFFE + FLAMME + BARRE DE PROGRESSION + INPUT -->
+	<img id="chauffe" src="imgs/chauffe.png" width="30">
+	<input name="temperature_fiole" id="temperature_fiole" type="text">
+		<div class="flamme_container">
+			  <div class="flamme_rouge flamme"></div>
+			  <div class="flamme_orange flamme"></div>
+			  <div class="flamme_jaune flamme"></div>
+			  <div class="flamme_blanche flamme"></div>
+			  <div class="flamme_bleu flamme_cercle"></div>
+		</div>
+		<div id="barre_cuisson">
+			<div id="barre_cuisson_indside"></div>
+		</div>
+
+<!-- POPUP SPOON -->
+		<div id="becher">
+			<div id="becher_contenance">
+				<div id="becher_liquide"></div>
+			</div>
+				<div id="becher_rebord_1"></div>
+				<div id="becher_rebord_2"></div>
+				<div id="graduation_1"></div>
+				<div id="graduation_2"></div>
+		</div>
+		<div id="Outer">
+			<div id="InnerA"> 
+				<span id="A">Départ</span>
+			 </div>
+			<div id="InnerB"> 
+				<span id="B">Fin</span>
+			</div>
+		</div>
+
+<!-- TUBE A ESSAIE -->
+	<div id="popup_speed">
+		<p id="start_button">commencer</button>
+	</div>	
+	<div id="structure_tube"></div>
+		<div id="tube_a_essaie">
+			<div id="tube_a_essaie_contenance">
+				<div id="tube_a_essaie_liquide"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- SPOON -->
+    <div style="padding-top:300px;">
+        <p id="rythmFeedBack"></p>
+    </div>
+
+<!-- FLACON -->
+<div id="flacon">
+	<div id="flacon_contenance">
+			<div id="flacon_liquide"></div>
+	</div>
+</div>
+
+<!-- RELIAGE --> 
+<div id="structure_reliage_tube_1">
+	<div id="structure_reliage_tube_1_remplissage"></div>
+</div>
+<div id="structure_reliage_tube_2">
+	<div id="structure_reliage_tube_2_remplissage"></div>
+</div>
+<div id="structure_reliage_tube_3">
+	<div id="structure_reliage_tube_3_remplissage"></div>
+</div>
+
+<div id="structure_reliage_ballon_1">
+	<div id="structure_reliage_ballon_1_remplissage"></div>
+</div>
+<div id="structure_reliage_ballon_2">
+	<div id="structure_reliage_ballon_2_remplissage"></div>
+</div>
+
+<!-- POPUP FOURNEE -->
+<div id="popup_win">
+	<div id="popup_cross"></div>
+	<div id="popup_win_texte"></div>
+</div>
+
+<div id="alerte_perdu"></div>
+
+
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/main.js"></script>	
 </body>
 </html>
