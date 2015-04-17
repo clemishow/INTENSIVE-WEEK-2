@@ -1,202 +1,109 @@
 <!DOCTYPE html>
-<html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<title>Game</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>AdiMeth</title>
+	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link href="css/demo-page.css" rel="stylesheet" media="all">
+    <link href="css/hover.css" rel="stylesheet" media="all">
 </head>
 <body>
-<!-- BARRE -->
-	<header>
-		<div id="stabilite" >
-			<h3 id="stabilite_texte">Stabilité :</h3>
-			<h3 id="stabilite_valeur">20%</h3>
-		</div>
-		
-		<div id="purete">
-			<h3>Pureté :</h3>
-			<h3 id="purete_valeur"> 90%</h3>
-		</div>
+		<!--[if lt IE 10]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-		
-		<div id="argent">
-			<h3>Argent :</h3>
-			<h3 id="argent_valeur"> 1000000</h3>
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="content">
+            <div id="logo"> 
+                <a href="http://projet2.saulnier.fr/" class="bt"><img src="images/logo.png" alt="Accès au jeu" title="Accès au jeu"></a>
+            </div>
+            <div class="square" id="square1">
+                <img src="images/carre1.png">
+            </div>
+            <div class="square" id="square2">
+                <img src="images/carre1.png">
+            </div>
+            <br><h1> AdiMeth</h1>
 		</div>
-		<div class="navicon-container">
-  			<div class="navicon"></div>
-		</div>
-	</header>
-<!-- MENU + ELEMENTS -->
-	<nav>
-		<h2 id="title">MENU</h2>
-		<div id="amelioration_1">
-			<img src="imgs/becher.png" width="40">
-				<p id="amelioration_1_texte">Rempli le becher<br />COÛT : <span class="red">500</span><span class="red">$</span></p>
-			<a id="button_buy_liquide">améliorer</a>
-		</div>
-		<div id="amelioration_2">
-			<img src="imgs/chauffe.png" width="50">
-				<p id="amelioration_2_texte">Diminue de 2 secondes le temps de cuisson<br />COÛT : <span class="red" id="cout_chauffe">1000</span><span class="red">$</span></p>
-			<a id="button_buy_chauffe">améliorer</a>
-		</div>
-		<div id="amelioration_3">
-			<img id="crystal" src="imgs/crystal.png" width="60">
-				<p id="amelioration_3_texte">Produit plus de méthamphétamine<br />COÛT : <span class="red" id="cout_meth">3000</span><span class="red">$</span></p>
-			<a id="button_buy_meth">améliorer</a>
-		</div>
-		<div id="amelioration_4">
-			<img id="dealer" src="imgs/dealer.png" width="75">
-				<p id="amelioration_4_texte">Recrute des dealers pour vendre plus<br />COÛT : <span class="red" id="cout_dealer">8000</span><span class="red">$</span></p>
-			<a id="button_buy_dealer">améliorer</a>
-		</div>
-		<div id="amelioration_5">
-			<img id="stabilite_logo" src="imgs/stability.png" width="90">
-				<p id="amelioration_5_texte">Augmente de 20 points la stabilité<br />COÛT : <span class="red" id="cout_stability">500</span><span class="red">$</span></p>
-			<a id="button_buy_stability">améliorer</a>
-		</div>
-		<!-- <div id="amelioration_6">
-			<img id="molecular" src="imgs/molecular.png" width="100">
-				<p id="amelioration_6_texte">Augmente de 20 points la stabilité<br/>COÛT : <span class="red" id="cout_molecular">15000</span><span class="red">$</span></p>
-			<a id="button_buy_molecular">améliorer</a>
-		</div> -->
-	</nav>
-<!-- ALERTE -->
-	<div id="alerte">
-		<div id="alerte_texte"></div>
-		<div id="alerte_cross"></div>
+        
 	</div>
-
-<!-- POPUP + GAME -->
-	<div id="popup_jauge">
-		<div id="jauge">
-			<div id="cercle"></div>
-		</div>
-	</div>
-<!-- PIED -->
-<img id="pied" src="imgs/pied.png">
-<div id="pied_morceau"></div>
-<!-- FIOLE -->
-		<div id="container_fiole">
-			<div id="fiole">
-				<div id="fiole_2">
-					<div id="liquide"></div>
-				</div>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1">
+			<h2> BUT DU JEU</h2>
+            <img src="images/salut.jpg">
+            <div class="texte">
+                <p> Bonjour jeune apprenti chimiste . Tu es ici pour une seule et unique chose . Ici , on fait de la meth, une meth de malade et à foison .Penses-tu avoir les ressources, le cran et l'intelligence n'ecessaire pour suivre l'enseignement de Walter White, le plus grand spécialiste de la meth qui soit?</p>
 			</div>
-			<div id="tube">
-				<div id="tube_2">
-					<div id="liquide_tube"></div>
-				</div>	
-			</div>
-			<div id="rebord"></div>
-			<div id="mousse"></div>
-			<div id="mousse2"></div>
-			<div id="mousse3"></div>
-			<div id="mousse4"></div>
-			<div id="bulle_1"></div>
-			<div id="bulle_2"></div>
-			<div id="bulle_3"></div>
-			<div id="bulle_4"></div>
+            
 		</div>
-<!-- CHAUFFE + FLAMME + BARRE DE PROGRESSION + INPUT -->
-	<img id="chauffe" src="imgs/chauffe.png" width="30">
-	<input name="temperature_fiole" id="temperature_fiole" type="text">
-		<div class="flamme_container">
-			  <div class="flamme_rouge flamme"></div>
-			  <div class="flamme_orange flamme"></div>
-			  <div class="flamme_jaune flamme"></div>
-			  <div class="flamme_blanche flamme"></div>
-			  <div class="flamme_bleu flamme_cercle"></div>
+		<div class="slide" id="slide2">
+			 <h2> REGLE 1</h2>
+            <div class="texte">
+                <p>La première étape pour réaliser ta meth est de cliquer sur le ballon, une barre de progression apparaitra, il te suffira de cliquer pour arreter le curseur dans la zone adéquate. Cela commencera la préparation.</p>
+			</div> 
 		</div>
-		<div id="barre_cuisson">
-			<div id="barre_cuisson_indside"></div>
-		</div>
-
-<!-- POPUP SPOON -->
-		<div id="becher">
-			<div id="becher_contenance">
-				<div id="becher_liquide"></div>
-			</div>
-				<div id="becher_rebord_1"></div>
-				<div id="becher_rebord_2"></div>
-				<div id="graduation_1"></div>
-				<div id="graduation_2"></div>
-		</div>
-		<div id="Outer">
-			<div id="InnerA"> 
-				<span id="A">Départ</span>
-			 </div>
-			<div id="InnerB"> 
-				<span id="B">Fin</span>
+		<div class="slide" id="slide3">
+			 <h2> REGLE 2</h2>
+            <div class="texte">
+                <p>En ce qui concerne la deuxième étape , il te faut chauffer la mixture. C'est pourquoi il te faudra cliquer sur le chauffe-ballon.</p>
 			</div>
 		</div>
-
-<!-- TUBE A ESSAIE -->
-	<div id="popup_speed">
-		<p id="start_button">commencer</button>
-	</div>	
-	<div id="structure_tube"></div>
-		<div id="tube_a_essaie">
-			<div id="tube_a_essaie_contenance">
-				<div id="tube_a_essaie_liquide"></div>
+		<div class="slide" id="slide4">
+			<h2> REGLE 3</h2>
+                 <div class="texte">
+                <p>La troisième étape est une épreuve de précision. Il te faudra déplacer la cuillère remplis de produit chimique avec une précision hors du commun. Il te suffira de glisser ta souris a l'intérieur du cadr prévu a cet effet. </p>
+			</div>
+		</div>
+		<div class="slide" id="slide5">
+			<h2> SUITZ</h2>
+                <div class="texte">
+                <p> En ce qui concerne la suite, des étapes vont se rajouter et les difficultées vont s'intensifier, il te faudra prendre des initiatives afin de rivaliser au maximum avec Walter White et pourquoi pas le surpasser ?</p>
 			</div>
 		</div>
 	</div>
-
-<!-- SPOON -->
-    <div style="padding-top:300px;">
-        <p id="rythmFeedBack"></p>
-    </div>
-
-<!-- FLACON -->
-<div id="flacon">
-	<div id="flacon_contenance">
-			<div id="flacon_liquide"></div>
+	<div class="section" id="section2">
+		<div class="content">
+            <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/adrien.png" class="hover" />
+                <p class="text">Adrien Menegaux</p>
+            </div> 
+           <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/julio.png" class="hover" />
+                <p class="text">Jules Belamy</p>
+            </div>
+            <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/mathilde.png" class="hover" />
+                <p class="text">Mathilde Chanthapanya</p>
+            </div>
+            <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/arthur.png" class="hover" />
+                <p class="text">Arthur Chassin</p>
+            </div>
+            <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/clement.png" class="hover" />
+                <p class="text">Clément Saulnier</p>
+            </div>
+            <div id="wrapper" class="hvr-bounce-in">
+                <img src="images/ulysse.png" class="hover" />
+                <p class="text">Ulysse Tallepied</p>
+            </div>
+        
+            
+		</div>
 	</div>
 </div>
 
-<!-- RELIAGE --> 
-<div id="structure_reliage_tube_1">
-	<div id="structure_reliage_tube_1_remplissage"></div>
-</div>
-<div id="structure_reliage_tube_2">
-	<div id="structure_reliage_tube_2_remplissage"></div>
-</div>
-<div id="structure_reliage_tube_3">
-	<div id="structure_reliage_tube_3_remplissage"></div>
-</div>
+<script type="text/javascript" src="js/javascript.fullPage.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		menu: '#menu',
+		css3:true
+	});
 
-<div id="structure_reliage_ballon_1">
-	<div id="structure_reliage_ballon_1_remplissage"></div>
-</div>
-<div id="structure_reliage_ballon_2">
-	<div id="structure_reliage_ballon_2_remplissage"></div>
-</div>
+</script>
 
-<!-- POPUP FOURNEE -->
-<div id="popup_win">
-	<div id="popup_cross"></div>
-	<div id="popup_win_texte"></div>
-</div>
-
-<!-- CASSAGE DE METH -->
-    <div id="methContainer">
-        <img class="eclat" src="imgs/1.png" alt="" style="width : 200px; height : auto;" id="img1">
-        <img class="eclat" src="imgs/2.png" alt="" style="width : 200px; height : auto;" id="img2">
-        <img class="eclat" src="imgs/3.png" alt="" style="width : 200px; height : auto;" id="img3">
-        <img class="eclat" src="imgs/4.png" alt="" style="width : 200px; height : auto;" id="img4">
-        <img class="eclat" src="imgs/5.png" alt="" style="width : 200px; height : auto;" id="img5">
-        <img class="eclat" src="imgs/6.png" alt="" style="width : 200px; height : auto;" id="img6">
-        <img class="eclat" src="imgs/7.png" alt="" style="width : 200px; height : auto;" id="img7">
-    </div>
-
-
-<div id="alerte_perdu"></div>
-
-
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/main.js"></script>	
 </body>
 </html>

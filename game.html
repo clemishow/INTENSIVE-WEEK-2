@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+	<link rel="stylesheet" href="css/game.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<!-- BARRE -->
+	<header>
+		<div id="stabilite" >
+			<h3 id="stabilite_texte">Stabilité :</h3>
+			<h3 id="stabilite_valeur">20%</h3>
+		</div>
+		
+		<div id="purete">
+			<h3>Pureté :</h3>
+			<h3 id="purete_valeur"> 90%</h3>
+		</div>
+
+		
+		<div id="argent">
+			<h3>Argent :</h3>
+			<h3 id="argent_valeur"> 1000000</h3>
+		</div>
+		<div class="navicon-container">
+  			<div class="navicon"></div>
+		</div>
+	</header>
+<!-- MENU + ELEMENTS -->
+	<nav>
+		<h2 id="title">MENU</h2>
+		<div id="amelioration_1">
+			<img src="images/becher.png" width="40">
+				<p id="amelioration_1_texte">Rempli le becher<br />COÛT : <span class="red">500</span><span class="red">$</span></p>
+			<a id="button_buy_liquide">améliorer</a>
+		</div>
+		<div id="amelioration_2">
+			<img src="images/chauffe.png" width="50">
+				<p id="amelioration_2_texte">Diminue de 2 secondes le temps de cuisson<br />COÛT : <span class="red" id="cout_chauffe">1000</span><span class="red">$</span></p>
+			<a id="button_buy_chauffe">améliorer</a>
+		</div>
+		<div id="amelioration_3">
+			<img id="crystal" src="images/crystal.png" width="60">
+				<p id="amelioration_3_texte">Produit plus de méthamphétamine<br />COÛT : <span class="red" id="cout_meth">3000</span><span class="red">$</span></p>
+			<a id="button_buy_meth">améliorer</a>
+		</div>
+		<div id="amelioration_4">
+			<img id="dealer" src="images/dealer.png" width="75">
+				<p id="amelioration_4_texte">Recrute des dealers pour vendre plus<br />COÛT : <span class="red" id="cout_dealer">8000</span><span class="red">$</span></p>
+			<a id="button_buy_dealer">améliorer</a>
+		</div>
+		<div id="amelioration_5">
+			<img id="stabilite_logo" src="images/stability.png" width="90">
+				<p id="amelioration_5_texte">Augmente de 20 points la stabilité<br />COÛT : <span class="red" id="cout_stability">500</span><span class="red">$</span></p>
+			<a id="button_buy_stability">améliorer</a>
+		</div>
+		<!-- <div id="amelioration_6">
+			<img id="molecular" src="imgs/molecular.png" width="100">
+				<p id="amelioration_6_texte">Augmente de 20 points la stabilité<br/>COÛT : <span class="red" id="cout_molecular">15000</span><span class="red">$</span></p>
+			<a id="button_buy_molecular">améliorer</a>
+		</div> -->
+	</nav>
+<!-- ALERTE -->
+	<div id="alerte">
+		<div id="alerte_texte"></div>
+		<div id="alerte_cross"></div>
+	</div>
+
+<!-- POPUP + GAME -->
+	<div id="popup_jauge">
+		<div id="jauge">
+			<div id="cercle"></div>
+		</div>
+	</div>
+<!-- PIED -->
+<img id="pied" src="images/pied.png">
+<div id="pied_morceau"></div>
+<!-- FIOLE -->
+		<div id="container_fiole">
+			<div id="fiole">
+				<div id="fiole_2">
+					<div id="liquide"></div>
+				</div>
+			</div>
+			<div id="tube">
+				<div id="tube_2">
+					<div id="liquide_tube"></div>
+				</div>	
+			</div>
+			<div id="rebord"></div>
+			<div id="mousse"></div>
+			<div id="mousse2"></div>
+			<div id="mousse3"></div>
+			<div id="mousse4"></div>
+			<div id="bulle_1"></div>
+			<div id="bulle_2"></div>
+			<div id="bulle_3"></div>
+			<div id="bulle_4"></div>
+		</div>
+<!-- CHAUFFE + FLAMME + BARRE DE PROGRESSION + INPUT -->
+	<img id="chauffe" src="images/chauffe.png" width="30">
+	<input name="temperature_fiole" id="temperature_fiole" type="text">
+		<div class="flamme_container">
+			  <div class="flamme_rouge flamme"></div>
+			  <div class="flamme_orange flamme"></div>
+			  <div class="flamme_jaune flamme"></div>
+			  <div class="flamme_blanche flamme"></div>
+			  <div class="flamme_bleu flamme_cercle"></div>
+		</div>
+		<div id="barre_cuisson">
+			<div id="barre_cuisson_indside"></div>
+		</div>
+
+<!-- POPUP SPOON -->
+		<div id="becher">
+			<div id="becher_contenance">
+				<div id="becher_liquide"></div>
+			</div>
+				<div id="becher_rebord_1"></div>
+				<div id="becher_rebord_2"></div>
+				<div id="graduation_1"></div>
+				<div id="graduation_2"></div>
+		</div>
+		<div id="Outer">
+			<div id="InnerA"> 
+				<span id="A">Départ</span>
+			 </div>
+			<div id="InnerB"> 
+				<span id="B">Fin</span>
+			</div>
+		</div>
+
+<!-- TUBE A ESSAIE -->
+	<div id="popup_speed">
+		<p id="start_button">commencer</button>
+	</div>	
+	<div id="structure_tube"></div>
+		<div id="tube_a_essaie">
+			<div id="tube_a_essaie_contenance">
+				<div id="tube_a_essaie_liquide"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- SPOON -->
+    <div style="padding-top:300px;">
+        <p id="rythmFeedBack"></p>
+    </div>
+
+<!-- FLACON -->
+<div id="flacon">
+	<div id="flacon_contenance">
+			<div id="flacon_liquide"></div>
+	</div>
+</div>
+
+<!-- RELIAGE --> 
+<div id="structure_reliage_tube_1">
+	<div id="structure_reliage_tube_1_remplissage"></div>
+</div>
+<div id="structure_reliage_tube_2">
+	<div id="structure_reliage_tube_2_remplissage"></div>
+</div>
+<div id="structure_reliage_tube_3">
+	<div id="structure_reliage_tube_3_remplissage"></div>
+</div>
+
+<div id="structure_reliage_ballon_1">
+	<div id="structure_reliage_ballon_1_remplissage"></div>
+</div>
+<div id="structure_reliage_ballon_2">
+	<div id="structure_reliage_ballon_2_remplissage"></div>
+</div>
+
+<!-- POPUP FOURNEE -->
+<div id="popup_win">
+	<div id="popup_cross"></div>
+	<div id="popup_win_texte"></div>
+</div>
+
+<!-- CASSAGE DE METH -->
+    <div id="methContainer">
+        <img class="eclat" src="images/1.png" alt="" style="width : 200px; height : auto;" id="img1">
+        <img class="eclat" src="images/2.png" alt="" style="width : 200px; height : auto;" id="img2">
+        <img class="eclat" src="images/3.png" alt="" style="width : 200px; height : auto;" id="img3">
+        <img class="eclat" src="images/4.png" alt="" style="width : 200px; height : auto;" id="img4">
+        <img class="eclat" src="images/5.png" alt="" style="width : 200px; height : auto;" id="img5">
+        <img class="eclat" src="images/6.png" alt="" style="width : 200px; height : auto;" id="img6">
+        <img class="eclat" src="images/7.png" alt="" style="width : 200px; height : auto;" id="img7">
+    </div>
+
+
+<div id="alerte_perdu">
+	<div id="popup_perdu_texte"></div>
+</div>
+
+
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/game.js"></script>	
+</body>
+</html>

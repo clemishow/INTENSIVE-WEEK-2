@@ -1,12 +1,15 @@
 body {
-	background: #34495e;
+	background-color: #3D5C60;
 	font-family: 'Open Sans';
-	background: url('../imgs/background2.jpg');
+	background: url('../images/background2.jpg');
 	background-size: 1280px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
+	font-weight: 100;
+
+
 }
 
 header {
@@ -28,19 +31,33 @@ p {
   	opacity: 1;
 }
 
+a {
+	text-decoration: none;
+
+}
+
 h3 {
 	position: absolute;
-	left: -65px;
-	top: 3px;
+	left: -75px;
+	top: -17px;
 }
 
 .red {
 	color: #e74c3c;
 }
 
+#stabilite_texte, 
+#stabilite_valeur,
+#purete_valeur,
+#stabilite, 
+#purete,
+#argent {
+	top: -17px;
+}
+
 #stabilite_texte {
-	position: absolute;
-	left: -75px;
+	  position: absolute;
+  left: -86px;
 }
 
 #stabilite_valeur{
@@ -152,14 +169,15 @@ h3 {
 }
 
 #title:before {
-	content: "";
-	position: absolute;
-	top: -10px;
-	left: 0;
-	background: white;
-	width: 300px;
-	height: 10px;
-	z-index: 2;
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 0;
+  background: white;
+  width: 300px;
+  height: 34px;
+  z-index: 2;
+
 }
 
 #amelioration_1, #amelioration_2, #amelioration_3, #amelioration_4, #amelioration_5 {
@@ -167,7 +185,7 @@ h3 {
 	height: 165px;
 	background: #95a5a6;
 	border-bottom: solid 2px #34495e; 
-	padding-top: 15px;
+	padding-top: 35px;
 }
 
 #amelioration_5 {
@@ -188,20 +206,20 @@ h3 {
 
 
 #amelioration_1_texte {
-	top: 20px;
+	top: -8px;
 }
 
 
 #amelioration_2_texte {
-	top: 10px;
+	top: -10px;
 }
 
 #amelioration_3_texte {
-	top: -15px;
+	top: -35px;
 }
 
 #amelioration_4_texte {
-	top: -30px;
+	top: -55px;
 }
 
 #amelioration_5_texte, #amelioration_6_texte {
@@ -222,24 +240,25 @@ h3 {
 }
 
 #button_buy_chauffe {
-	top: 23px;
+	top: -18px;
 }
 
 
 #button_buy_liquide {
-	top: 42px;
+	top: -6px;
 }
 
 #button_buy_meth, #button_buy_dealer {
-	top: 0px;
+	top: -35px;
 }
 
-#button_buy_dealer {
-	top: -17px;
+ #button_buy_dealer {
+	top: -54px;
 }
+
 
 #button_buy_stability {
-	top: -34px;
+	top: -44px;
 }
 
 #button_buy_molecular {
@@ -926,6 +945,18 @@ nav {
 	margin-top: 25px;
 }
 
+#popup_perdu_texte {
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 9999999999;
+	padding: 16px;
+	margin-top: 25px;
+	font-size: 28px;
+  	position: absolute;
+  	top: 50px;
+}
+
 #popup_cross {
 	position: absolute;
 	top: 9px;
@@ -1272,7 +1303,7 @@ nav {
 	color: white;
 	transition: 200s;
 	display: none;
-	cursor:url('../imgs/spoon.png'), auto;
+	cursor:url('../images/spoon.png'), auto;
 }
 
 #Outer:hover {
@@ -1302,7 +1333,7 @@ nav {
 	background-color: #069CCE;
 	margin-left: 50px;
 	overflow: hidden;
-	cursor:url('../imgs/hammer2.png'), auto;
+	cursor:url('../images/hammer2.png'), auto;
 	display: none;
 	z-index: 99999999999;
 

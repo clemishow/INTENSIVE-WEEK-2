@@ -28,6 +28,7 @@ var cout_dealer = document.getElementById("cout_dealer");
 var cout_molecular = document.getElementById("cout_molecular");
 var alerte = document.getElementById("alerte_texte");
 var resultat = document.getElementById("popup_win_texte");
+var perdu = document.getElementById("popup_perdu_texte");
 var valeur_argent = document.getElementById("argent_valeur");
 var valeur_purete = document.getElementById("purete_valeur");
 var valeur_stabilite = document.getElementById("stabilite_valeur");
@@ -45,7 +46,7 @@ var last = 0;
 var diff = 0;
 var nombreClick = 1;
 var rythm = 0;
-var rythmGoal = 5; //nombre de clicks en rythme pour gagner
+var rythmGoal = 10;
 valeur_argent.innerHTML = argent +'\$';
 valeur_stabilite.innerHTML = Math.round((stabilite*100)*100)/100+'\%';
 valeur_purete.innerHTML = Math.round((purete*100)*100)/100+'\%';
@@ -56,6 +57,8 @@ valeur_purete.innerHTML = Math.round((purete*100)*100)/100+'\%';
 pause.style.webkitAnimationPlayState="paused";
 
 $(document).ready(function() {
+
+
 // AMELIORATIONS
 
 // PREMIERE --> BECHER
@@ -63,6 +66,7 @@ $("#button_buy_liquide").on("click", function() {
 	if (argent >= 500) {
 		argent -=500;
 		compteur_becher_liquide = 0;
+    compteur_becher = 0;
 		$("#alerte").css("background-color", "#3498db");
   		$("#alerte").css("display", "block");
   		alerte.innerHTML = 'Achat réussi';
@@ -542,7 +546,7 @@ $("#chauffe").on("click", function() {
 		setTimeout(function() {
 			$("#alerte").css("display", "block");
 			$(".flamme_container").css("display", "none");
-	 		alerte.innerHTML = 'Bravo, un nouvel élément est apparue, clique dessus pour intéragirir';
+	 		alerte.innerHTML = 'Bravo, un nouvel élément est apparut, clique dessus pour intéragrir';
 	 		$('#tube_a_essaie').css("display", "block");
 	 		$('#structure_tube').css("display", "block");
 		}, 5000);
@@ -614,7 +618,7 @@ $("#chauffe").on("click", function() {
 	  $("#alerte").css("display", "block");
 	  $("#becher_liquide").css("top", "+10px")
 	  $("#tube_a_essaie_liquide").css("top", "0")
-	  alerte.innerHTML = 'Bravo, maintenant secous la fiole a un rythme régulier avec "O"';
+	  alerte.innerHTML = 'Bravo, maintenant secoues la fiole a un rythme régulier avec "O"';
       win = 1;
       },200);
       compteur_succes++;
@@ -633,31 +637,48 @@ $("#chauffe").on("click", function() {
           $("#alerte").css("background-color", "#e74c3c");
 	  	  alerte.innerHTML = 'Tu as échoué, cela te coute du produit, recommence';
 	  	  compteur_tube = 0;
-	  	  compteur_echec++;
+	  	  setTimeout( function() {
+				compteur_echec++;
+	  	  	},500) 
 
         }
       },200);
       
       if (compteur_becher == 0) {
 	  	  	$("#becher_liquide").css("top", "+10px")
-	  	  	compteur_becher++;
+	  	  	setTimeout( function() {
+				compteur_becher++;
+	  	  	},300) 
 	  	  }
 
 	  else if (compteur_becher == 1) {
 	  	  	$("#becher_liquide").css("top", "+25px")
-	  	  	compteur_becher++;
+	  	  	setTimeout( function() {
+				compteur_becher++;
+	  	  	},300) 
 	  	  }	  
 
 	  else if (compteur_becher == 2) {
 	  	  	$("#becher_liquide").css("top", "+40px")
-	  	  	compteur_becher++;
+	  	  	setTimeout( function() {
+				compteur_becher++;
+	  	  	},300) 
 	  	  }	  
 
 	  else if (compteur_becher == 3) {
 	  	  	$("#becher_liquide").css("top", "+70px")
 	  	  	alerte.innerHTML = 'Tu n\'as plus de liquide il faut que tu en rachete'
 	  	  	compteur_becher_liquide = 1;
-	  	  	compteur_becher++;
+	  	  	setTimeout( function() {
+				console.log(compteur_becher);
+	  	  	},300) 
+	  	  }	 	  	 
+
+	  if (compteur_becher == 3 && compteur_fournee == 1) {
+	  	console.log("test");
+	  	$("#alerte_perdu").css("display", "block");
+	  	  	perdu.innerHTML = 'Vous avez perdu cliquer <a href="javascript:window.location.reload()"ici/a><br/> pour recommencer'
+					
 	  	  }	 	  	 
     });  
 
@@ -805,8 +826,8 @@ $("#chauffe").on("click", function() {
 				
 			do {
 				if ((compteur_echec >= 1) && (compteur_echec < 2)) {
-					stabilite -= 0.2313310841098401830918309138;
-					purete -= 0.05313310841098401830918309138;
+					stabilite -= 0.2;
+					purete -= 0.05;
 				}
 
 				else if (compteur_echec >= 2 && compteur_echec < 3) {
@@ -829,18 +850,15 @@ $("#chauffe").on("click", function() {
 				}
 			}
 
-			while(isNaN==true || stabilite ==0)	{
-				if (stabilite <= 0) {
-					stabilite = 0;
-					$("#alerte_perdu").css("display", "block");
-				}
+			while(stabilite ==0)	{
+
 			}
 
 
 				
 
 				if (compteur_succes >= 1 && compteur_succes < 2)  {
-					purete += 0.5313310841098401830918309138;
+					purete += 0.5;
 				}
 
 				else if (compteur_succes >= 2 && compteur_succes < 3) {
@@ -918,6 +936,10 @@ $("#chauffe").on("click", function() {
 		imgCounter = 1;
 		compteur_victoire_spoon = 0;
 		compteur_remplissage = 0;
+		if (stabilite <= 0) {
+					perdu.innerHTML = 'Vous avez perdu, cliquer <a href="javascript:window.location.reload()"ici/a> pour recommencer'
+					$("#alerte_perdu").css("display", "block");
+				}
 
 		setTimeout(function() {
 			compteur_etape = 0;
@@ -965,8 +987,7 @@ $("#chauffe").on("click", function() {
         	argent_gagne = 5000;
         	}
 
-
-
+        	//
 
         	if (compteur_argent_dealer == 1) {
         	argent_gagne += 750;
@@ -997,22 +1018,11 @@ $("#chauffe").on("click", function() {
         	valeur_argent.innerHTML = argent +'\$';
             valeur_stabilite.innerHTML = Math.round((stabilite*100)*100)/100+'\%';
 			valeur_purete.innerHTML = Math.round((purete*100)*100)/100+'\%';
-        	resultat.innerHTML = 'résultat de la fournée :</br> </br></br> vous avez gagné : ' +argent_gagne+ '</br></br></br> vous avez une stabilité de : ' +stabilite+ ' </br></br></br> vous avez une pureté de : ' +purete+ '</br></br></br> total de l\'argent de : ' +argent ;
+        	resultat.innerHTML = 'résultat de la fournée :</br> </br></br> vous avez gagné : ' +argent_gagne+ '</br></br></br> vous avez une stabilité de : ' +Math.round((stabilite*100)*100)/100+'\%'+ ' </br></br></br> vous avez une pureté de : ' +Math.round((purete*100)*100)/100+'\%'+ '</br></br></br> total de l\'argent de : ' +argent ;
             $("#popup_win").css("display", "block"); // VICTOIRE
              $("#methContainer").css("display", "none");
               $(".eclat").css("display", "none");
         }
 
-    });
-
-
-	     
+    });     
 });
-
-
-
-
-
-
-
-
